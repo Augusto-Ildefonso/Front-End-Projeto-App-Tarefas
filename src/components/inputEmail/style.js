@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
         shadowColor: '#000000',
         shadowOpacity: 0.5,
         shadowOffset: { width: 0, height: 4 },
-        marginTop: 53,   
+        marginTop: 33,   
         marginLeft: 36.5,     
     }
 });
