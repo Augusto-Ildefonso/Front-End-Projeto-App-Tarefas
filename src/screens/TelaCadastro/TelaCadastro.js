@@ -32,6 +32,7 @@ export default TelaCadastro = ({navigation}) => {
             <InputEmailCriarConta/>
             <InputEmailConfirmar/>
             <InputNome/>
+            <InputData/>
             <InputPasswordCadastro/>
             <InputPasswordCadastroConf/>
             <ButtonCreateAccountCadast navigation={navigation}/>

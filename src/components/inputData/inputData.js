@@ -1,23 +1,81 @@
 import React, { useState } from 'react';
-import { View } from 'react-native';
+import { View, Pressable, TextInput, Platform, TouchableOpacity, Text } from 'react-native';
 import { styles } from './style';
-import { DatePicker } from 'react-native-datepicker';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 export default function InputData() {
-    const [data, setData] = useState('');
+    const [date, setDate] = useState(new Date());
+    const [showPicker, setShowPicker] = useState(false);
+    const [dateOfBirth, setDateOfBirth] = useState('');
 
-    const mudarData = (data) => {
-        setData(data);
-    }
+    const toggleDatepicker = () => {
+        setShowPicker(!showPicker);
+    };
+    
+    const onChange = ({ type }, selectedDate) => {
+        if(type == "set"){
+            const currentDate = selectedDate;
+            setDate(currentDate);
+
+            if(Platform.OS === 'android'){
+                toggleDatepicker();
+                setDateOfBirth(currentDate.toDateString());
+            }
+        } else{
+            toggleDatepicker();
+        }
+    };
+
+    const confirmIOSDate = () => {
+        setDateOfBirth(date.toDateString());
+        toggleDatepicker();
+    };
 
     return (
         <View>
-            <DatePicker
-                format="DD-MM-YYYY"
-                style={styles.input}
-                date={data}
-                onDateChange={mudarData}
-            />
+
+            {showPicker && (
+                <DateTimePicker
+                    mode='date'
+                    display='spinner'
+                    value={date}
+                    onChange={onChange}
+                />
+            )}
+
+            {showPicker && Platform.OS === 'ios' && (
+                <View style={{flexDirection: "row", justifyContent: "space-around"}}> 
+
+                <TouchableOpacity onPress={toggleDatepicker} style={styles.botaoCancelar}>
+                    <Text style={{color: '#FFFFFF', fontSize: 20}}>Cancelar</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={confirmIOSDate} style={styles.botaoConfirmar}>
+                    <Text style={{color: '#FFFFFF', fontSize: 20}}>Confirmar</Text>
+                </TouchableOpacity>
+
+                </View>
+            )}
+            
+            
+
+            {!showPicker && (
+                <Pressable
+                    onPress={toggleDatepicker}
+                >
+                    <TextInput
+                        style={styles.input}
+                        placeholder={'Data...'}
+                        value={dateOfBirth}
+                        onChangeText = {setDateOfBirth}
+                        placeholderTextColor={'#424242'}
+                        autoCapitalize='none'
+                        editable={false}
+                        onPressIn={toggleDatepicker}
+                    />
+                </Pressable>
+            )}
+            
         </View>
     );
 }
