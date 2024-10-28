@@ -17,10 +17,6 @@ export const style = StyleSheet.create({
         marginLeft: 16,
         resizeMode: 'stretch',
     },
-    menuIcon:{
-        marginTop: -44.5,
-        marginLeft: 347,
-    },
     plusIcon:{
         marginTop: 650,
         marginLeft: 313,

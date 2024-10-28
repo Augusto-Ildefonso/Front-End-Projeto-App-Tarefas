@@ -1,18 +1,18 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { View, TouchableOpacity } from 'react-native';
+import Entypo from "react-native-vector-icons/Entypo";
 import { style } from './style'; 
-
-const Drawer = createDrawerNavigator();
 
 export default function Menu(){
     return(
-        <NavigationContainer>
-            <Drawer.Navigator initialRouteName="menu" drawerStyle={style.menu}>
-                <Drawer.Screen
-                    name="Alterar Dados"
-                    //component={}
-                />
-            </Drawer.Navigator>
-        </NavigationContainer>
-    )
+        <View>
+            <TouchableOpacity onPress={1}>
+                <Entypo
+                    name='menu'
+                    size={30}
+                    color='#0400AA'
+                    style={style.menuIcon}
+            />
+            </TouchableOpacity>
+        </View>
+    );
 }
