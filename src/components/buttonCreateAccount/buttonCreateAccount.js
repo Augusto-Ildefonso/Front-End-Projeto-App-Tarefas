@@ -3,13 +3,13 @@ import { Alert, TouchableOpacity, View, Text } from "react-native";
 import { styles } from "./style";
 import { font_styles } from "../../../assets/fonts/style";
 
-export default function ButtonCreateAccount(){
-    function onPressLogin(){
-        Alert.alert("Conta criada");
+export default function ButtonCreateAccount({navigation}){
+    function onPressCadastro(){
+        navigation.navigate('TelaCadastro');
     }
     return(
         <View>
-            <TouchableOpacity onPress={onPressLogin} style={styles.button}><Text style={styles.letra}>Criar Conta</Text></TouchableOpacity>
+            <TouchableOpacity onPress={onPressCadastro} style={styles.button}><Text style={styles.letra}>Criar Conta</Text></TouchableOpacity>
         </View>
     );
 }

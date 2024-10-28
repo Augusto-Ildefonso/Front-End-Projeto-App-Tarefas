@@ -7,7 +7,7 @@ import ButtonCreateAccount from '../../components/buttonCreateAccount/buttonCrea
 import { style } from './style';
 import AntDesign from "react-native-vector-icons/AntDesign";
 
-export default TelaLogin = () => {
+export default TelaLogin = ({ navigation }) => {
 
     const OnPressFacebook = () => Linking.openURL('https://www.facebook.com/ICMCJunior/');
 
@@ -27,9 +27,9 @@ export default TelaLogin = () => {
             />
             <InputEmail/>
             <InputPassword/>
-            <ButtonLogin/>
+            <ButtonLogin navigation={navigation}/>
             <Text style={style.text}>ou</Text>
-            <ButtonCreateAccount/>
+            <ButtonCreateAccount navigation={navigation}/>
 
             <View style={style.rodape}>
                 <TouchableOpacity style={style.primeiroElementoRodape} onPress={OnPressFacebook}>

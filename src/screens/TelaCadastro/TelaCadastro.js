@@ -11,7 +11,7 @@ import InputPasswordCadastroConf from '../../components/inputPasswordCadastroCon
 import InputCPF from '../../components/inputCPF/inputCPF';
 import ButtonCreateAccountCadast from '../../components/buttonCreateAccountCadast/buttonCreateAccountCadast';
 
-export default TelaCadastro = () => {
+export default TelaCadastro = ({navigation}) => {
     return (
         <View>
             <TouchableOpacity style={style.backbutton}>
@@ -34,7 +34,7 @@ export default TelaCadastro = () => {
             <InputNome/>
             <InputPasswordCadastro/>
             <InputPasswordCadastroConf/>
-            <ButtonCreateAccountCadast/>
+            <ButtonCreateAccountCadast navigation={navigation}/>
         </View>
     );
 }

@@ -1,13 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
+
 import { StyleSheet, View } from 'react-native';
-import TelaLogin from './src/screens/TelaLogin/TelaLogin';
-import TelaCadastro from './src/screens/TelaCadastro/TelaCadastro';
+import { MainNavigator } from './src/navigators/RootNavigator';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <TelaCadastro/>
-    </View>
+    <MainNavigator initialScreen='TelaLogin'/>
   );
 }
 
@@ -15,8 +12,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#ffffff',
-    //alignItems: 'center',
-    //justifyContent: 'center',
   }
 });
 

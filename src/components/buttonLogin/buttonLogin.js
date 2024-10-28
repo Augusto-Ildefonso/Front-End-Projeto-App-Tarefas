@@ -3,9 +3,9 @@ import { Alert, TouchableOpacity, View, Text } from "react-native";
 import { styles } from "./style";
 import { font_styles } from "../../../assets/fonts/style";
 
-export default function ButtonLogin(){
-    function onPressLogin(){
-        Alert.alert("Login Realizado");
+export default function ButtonLogin({navigation}){
+    function onPressLogin(){  
+        navigation.navigate('TelaTarefas'); // Ajuste o nome da tela conforme necessário
     }
     return(
         <View>
