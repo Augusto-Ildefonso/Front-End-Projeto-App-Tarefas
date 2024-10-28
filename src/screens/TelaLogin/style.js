@@ -21,6 +21,7 @@ export const style = StyleSheet.create({
         height: 94,
         marginTop: 23,
         marginLeft: 116,
+        resizeMode: 'stretch',
     },
     rodape:{
         marginTop: 0,
@@ -40,5 +41,6 @@ export const style = StyleSheet.create({
         paddingRight: 0,
         marginLeft: 120,
         marginTop: -40,
-    }
+    },
+    
 })
