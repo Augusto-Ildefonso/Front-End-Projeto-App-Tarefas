@@ -20,5 +20,9 @@ export const style = StyleSheet.create({
     plusIcon:{
         marginTop: 650,
         marginLeft: 313,
-    }
+    },
+    menuIcon:{
+        marginTop: -44.5,
+        marginLeft: 347,
+    },
 })

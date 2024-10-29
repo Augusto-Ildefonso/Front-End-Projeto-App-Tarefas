@@ -4,7 +4,7 @@ import { MainNavigator } from './src/navigators/RootNavigator';
 
 export default function App() {
   return (
-    <MainNavigator initialScreen='TelaAlterar'/>
+    <MainNavigator initialScreen='TelaLogin'/>
   );
 }
 

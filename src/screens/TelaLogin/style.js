@@ -13,7 +13,7 @@ export const style = StyleSheet.create({
     logo:{
         width: 200,
         height: 200,
-        marginTop: 40,
+        marginTop: 50,
         marginLeft: 96.5,
     },
     nome:{
@@ -24,10 +24,9 @@ export const style = StyleSheet.create({
         resizeMode: 'stretch',
     },
     rodape:{
-        marginTop: 0,
         width: 165,
         height: 40,
-        marginTop: 90,
+        marginTop: 80,
         marginLeft: 114,
     },
     primeiroElementoRodape:{
