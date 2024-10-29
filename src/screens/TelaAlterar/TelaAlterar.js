@@ -13,12 +13,9 @@ import InputPasswordCadastroConfAlterar from '../../components/inputPasswordCada
 import ButtonAlterarDados from '../../components/buttonAlterarDados/buttonAlterarDados';
 
 export default TelaAlterar = ({navigation}) => {
-    function voltarTela(){
-        navigation.navigate('TelaTarefas');
-    }
     return (
         <View>
-            <TouchableOpacity onPress={voltarTela} style={style.backbutton}>
+            <TouchableOpacity onPress={() => navigation.navigate('TelaTarefas')} style={style.backbutton}>
                 <Antdesign
                     name="left"
                     size={30}

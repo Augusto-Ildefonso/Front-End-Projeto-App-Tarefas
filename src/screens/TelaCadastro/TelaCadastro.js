@@ -14,7 +14,7 @@ import ButtonCreateAccountCadast from '../../components/buttonCreateAccountCadas
 export default TelaCadastro = ({navigation}) => {
     return (
         <View>
-            <TouchableOpacity style={style.backbutton}>
+            <TouchableOpacity style={style.backbutton} onPress={() => navigation.navigate('TelaLogin')}>
                 <Antdesign
                     name="left"
                     size={30}

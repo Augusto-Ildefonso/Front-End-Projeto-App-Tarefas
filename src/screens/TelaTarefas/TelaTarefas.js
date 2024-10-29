@@ -34,7 +34,7 @@ export default TelaTarefas = ({navigation}) => {
                 <BarraMenu navigation={navigation} menuClose={() => setMenuVisible(false)}/>
             </Modal>
 
-            <TouchableOpacity onPress={1}>
+            <TouchableOpacity>
                 <AntDesign
                     name='pluscircle'
                     size={48}
