@@ -1,9 +1,10 @@
 import { StyleSheet, View } from 'react-native';
 import { MainNavigator } from './src/navigators/RootNavigator';
 
+
 export default function App() {
   return (
-    <MainNavigator initialScreen='TelaLogin'/>
+    <MainNavigator initialScreen='TelaAlterar'/>
   );
 }
 
