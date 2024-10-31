@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 4 },
         marginTop: 17,   
         marginLeft: 36.5,     
+        fontFamily: 'Jura-Bold',
     },
     botaoCancelar:{
         

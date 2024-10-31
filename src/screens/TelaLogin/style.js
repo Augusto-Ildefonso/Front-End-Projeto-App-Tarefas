@@ -5,6 +5,7 @@ export const style = StyleSheet.create({
         marginTop: 4,
         marginLeft: 186,
         color: '#424242',
+        fontFamily: 'Jura-Bold',
     },
     view:{
         backgroundColor: '#EEEEEE',

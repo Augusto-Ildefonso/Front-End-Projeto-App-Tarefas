@@ -1,7 +1,6 @@
 import React from "react";
 import { Alert, TouchableOpacity, View, Text } from "react-native";
 import { styles } from "./style";
-import { font_styles } from "../../../assets/fonts/style";
 
 export default function ButtonCreateAccount({navigation}){
     function onPressCadastro(){

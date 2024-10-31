@@ -1,8 +1,17 @@
 import { StyleSheet, View } from 'react-native';
 import { MainNavigator } from './src/navigators/RootNavigator';
+import { useFonts } from 'expo-font';
+import { useEffect, useState } from 'react';
 
 
 export default function App() {
+  const [loaded, error] = useFonts({
+    'Jura-Regular': require('./assets/fonts/Jura-Regular.ttf'),
+    'Jura-Bold': require('./assets/fonts/Jura-Bold.ttf'),
+  })
+
+  
+
   return (
     <MainNavigator initialScreen='TelaLogin'/>
   );
@@ -14,6 +23,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
   }
 });
+
+
 
 /*
 function InputBox(props){

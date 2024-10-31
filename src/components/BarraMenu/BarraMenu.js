@@ -5,6 +5,7 @@ import { styles } from "./style";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import PopupSairConta from "../popupSairConta/popupSairConta";
+import PopupDeletarConta from "../popupDeletarConta/popupDeletarConta";
 
 export default BarraMenu = ({navigation}, {menuClose}) => {
     function onPressAlterar(){
@@ -14,23 +15,27 @@ export default BarraMenu = ({navigation}, {menuClose}) => {
     const [popupSairVisible, setPopupSairVisible] = useState(false);
     const [popupDeletarVisible, setPopupDeletarVisible] = useState(false);
 
+    function menuClose(){
+        setPopupSairVisible(false);
+    };
+
     return(
         <SafeAreaView style={{flex: 1}}>
-            <TouchableOpacity style={{flex: 1, zIndex: 100}} onPress={menuClose}></TouchableOpacity>
+            <TouchableOpacity style={{flex: 1, zIndex: 100}} onPress={this.menuClose}></TouchableOpacity>
             <View style={styles.view}>
                 <TouchableOpacity onPress={onPressAlterar} style={styles.button}> 
                     <Text style={styles.text}>Alterar Dados</Text>
                 </TouchableOpacity>
 
                 <Modal visible={popupSairVisible} transparent={true} onRequestClose={() => setPopupSairVisible(false)}>
-                    <PopupSairConta/>
+                    <PopupSairConta navigation={navigation} handle={() => setPopupSairVisible(!popupSairVisible)}/>
                 </Modal>
                 <TouchableOpacity onPress={() => setPopupSairVisible(true)} style={styles.button1}> 
                     <Text style={styles.text}>Sair da Conta</Text>
                 </TouchableOpacity>
 
                 <Modal visible={popupDeletarVisible} transparent={true} onRequestClose={() => setPopupDeletarVisible(false)}>
-                
+                    <PopupDeletarConta navigation={navigation} handle={() => setPopupDeletarVisible(false)}/>
                 </Modal>
                 <TouchableOpacity onPress={() => setPopupDeletarVisible(true)} style={styles.button1}> 
                     <Text style={styles.text}>Deletar Conta</Text>

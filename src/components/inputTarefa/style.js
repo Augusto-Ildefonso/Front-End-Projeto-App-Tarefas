@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         shadowOffset: { width: 0, height: 4 },
         marginTop: -48,   
-        marginLeft: 32,     
+        marginLeft: 32,   
+        fontFamily: 'Jura-Bold',   
     }
 });

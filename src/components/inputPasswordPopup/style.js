@@ -12,5 +12,6 @@ export const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 4 },
         marginTop: 10,   
         marginLeft: 14,
+        fontFamily: 'Jura-Bold', 
     }
 });

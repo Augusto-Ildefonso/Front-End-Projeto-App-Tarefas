@@ -44,14 +44,14 @@ export default function InputData() {
             )}
 
             {showPicker && Platform.OS === 'ios' && (
-                <View style={{flexDirection: "row", justifyContent: "space-around"}}> 
+                <View style={{flexDirection: "row", justifyContent: "space-around", }}> 
 
                 <TouchableOpacity onPress={toggleDatepicker} style={styles.botaoCancelar}>
-                    <Text style={{color: '#FFFFFF', fontSize: 20}}>Cancelar</Text>
+                    <Text style={{color: '#FFFFFF', fontSize: 19, fontFamily: 'Jura-Bold', }}>Cancelar</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={confirmIOSDate} style={styles.botaoConfirmar}>
-                    <Text style={{color: '#FFFFFF', fontSize: 20}}>Confirmar</Text>
+                    <Text style={{color: '#FFFFFF', fontSize: 17.5, fontFamily: 'Jura-Bold', }}>Confirmar</Text>
                 </TouchableOpacity>
 
                 </View>

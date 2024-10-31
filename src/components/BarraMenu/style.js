@@ -18,8 +18,9 @@ export const styles = StyleSheet.create({
     text:{
         color: '#FFFFFF',
         padding: 0,
-        fontSize: 20,
+        fontSize: 18,
         justifyContent: 'center',
+        fontFamily: 'Jura-Bold',
     },
     button1:{
         marginTop: 16,
