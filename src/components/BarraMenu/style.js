@@ -62,5 +62,7 @@ export const styles = StyleSheet.create({
         height: 917,
         marginLeft: 0,
         marginTop: 0,
+        backgroundColor: 'black',
+        opacity: 0.3,
     }
 })
