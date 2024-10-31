@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     view:{
         marginLeft: 237,
+        marginTop: -917,
         width: 156,
         height: 917,
         backgroundColor: '#0400AA',
@@ -55,5 +56,11 @@ export const styles = StyleSheet.create({
         marginLeft: 41.5,
         marginTop: 16,
         resizeMode: 'stretch',
+    },
+    fora:{
+        width: 237,
+        height: 917,
+        marginLeft: 0,
+        marginTop: 0,
     }
 })

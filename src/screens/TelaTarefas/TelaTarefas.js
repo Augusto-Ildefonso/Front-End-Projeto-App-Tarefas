@@ -10,6 +10,10 @@ import InputTarefa from '../../components/inputTarefa/inputTarefa';
 export default TelaTarefas = ({navigation}) => {
     const [menuVisible, setMenuVisible] = useState(false);
 
+    const fecharMenu = () => {
+        setMenuVisible(!menuVisible);
+    };
+
     return (
         <View style={style.view}>
             <Image
@@ -17,7 +21,7 @@ export default TelaTarefas = ({navigation}) => {
                 style={style.image}
             />
             
-            <TouchableOpacity onPress={() => setMenuVisible(true)}>
+            <TouchableOpacity onPress={fecharMenu}>
                 <Entypo
                     name='menu'
                     size={30}
@@ -29,9 +33,9 @@ export default TelaTarefas = ({navigation}) => {
             <Modal
                 visible={menuVisible}
                 transparent={true}
-                onRequestClose={() => setMenuVisible(false)}
+                onRequestClose={fecharMenu}
             >
-                <BarraMenu navigation={navigation} menuClose={() => setMenuVisible(false)}/>
+                <BarraMenu navigation={navigation} menuClose={fecharMenu}/>
             </Modal>
 
             <TouchableOpacity>

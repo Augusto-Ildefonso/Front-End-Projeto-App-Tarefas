@@ -7,30 +7,31 @@ import AntDesign from "react-native-vector-icons/AntDesign";
 import PopupSairConta from "../popupSairConta/popupSairConta";
 import PopupDeletarConta from "../popupDeletarConta/popupDeletarConta";
 
-export default BarraMenu = ({navigation}, {menuClose}) => {
+export default BarraMenu = ({navigation, menuClose}) => {
     function onPressAlterar(){
         navigation.navigate('TelaAlterar')
+        menuClose();
     };
 
     const [popupSairVisible, setPopupSairVisible] = useState(false);
     const [popupDeletarVisible, setPopupDeletarVisible] = useState(false);
 
-    function menuClose(){
-        setPopupSairVisible(false);
+    const handleSair = () => {
+        setPopupSairVisible(!popupSairVisible);
     };
 
     return(
-        <SafeAreaView style={{flex: 1}}>
-            <TouchableOpacity style={{flex: 1, zIndex: 100}} onPress={this.menuClose}></TouchableOpacity>
+        <SafeAreaView>
+            <TouchableOpacity style={styles.fora} onPress={menuClose}></TouchableOpacity>
             <View style={styles.view}>
                 <TouchableOpacity onPress={onPressAlterar} style={styles.button}> 
                     <Text style={styles.text}>Alterar Dados</Text>
                 </TouchableOpacity>
 
-                <Modal visible={popupSairVisible} transparent={true} onRequestClose={() => setPopupSairVisible(false)}>
-                    <PopupSairConta navigation={navigation} handle={() => setPopupSairVisible(!popupSairVisible)}/>
+                <Modal visible={popupSairVisible} transparent={true} onRequestClose={handleSair}>
+                    <PopupSairConta navigation={navigation} handle={handleSair}/>
                 </Modal>
-                <TouchableOpacity onPress={() => setPopupSairVisible(true)} style={styles.button1}> 
+                <TouchableOpacity onPress={handleSair} style={styles.button1}> 
                     <Text style={styles.text}>Sair da Conta</Text>
                 </TouchableOpacity>
 

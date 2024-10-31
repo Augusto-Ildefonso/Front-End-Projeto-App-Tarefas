@@ -5,7 +5,7 @@ import ButtonDeletarConta from "../buttonDeletarConta/buttonDeletarConta";
 import ButtonCancelarDeletar from "../buttonCancelarDeletar/buttonCancelarDeletar";
 import InputPasswordPopup from "../inputPasswordPopup/inputPasswordPopup";
 
-export default PopupDeletarConta = ({navigation}, {handle}) => {
+export default PopupDeletarConta = ({navigation,handle}) => {
     return(
         <View style={styles.view}>
             <Text style={styles.text}>Tem certeza que deseja</Text>
