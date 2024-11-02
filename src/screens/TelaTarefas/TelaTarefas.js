@@ -7,6 +7,7 @@ import Entypo from "react-native-vector-icons/Entypo";
 import BarraMenu from '../../components/BarraMenu/BarraMenu'; 
 import InputTarefa from '../../components/inputTarefa/inputTarefa';
 import PopupTarefa from '../../components/popupTarefa/popupTarefa';
+import popupTarefaEditar from '../../components/popupTarefaEditar/popupTarefaEditar';
 
 export default TelaTarefas = ({navigation}) => {
     const [menuVisible, setMenuVisible] = useState(false);
