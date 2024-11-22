@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const style = StyleSheet.create({
     backbutton:{
-        marginTop: 50,
+        marginTop: 0,
         marginLeft: 15,
     },
     nome:{
@@ -18,5 +18,9 @@ export const style = StyleSheet.create({
     },
     email:{
         marginTop: 170,
-    }
+    },
+    view:{
+        backgroundColor: '#EEEEEE',
+        height: 971, // Arrumar melhor depois
+    },
 })

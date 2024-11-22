@@ -9,19 +9,25 @@ import InputStatus from "../inputStatus/inputStatus";
 import ButtonSalvar from "../buttonSalvar/buttonSalvar";
 
 export default PopupTarefa = ({handle}) => {
+    const [status, setStatus] = React.useState('#B6B6B6')
+    const [date, setDate] = React.useState()
+    const [name, setName] = React.useState()
+    const [time, setTime] = React.useState()
+    const [description, setDescription] = React.useState()
+
     return(
         <View style={styles.caixa}>
             <Text style={styles.nomeTarefa}>Nome da Tarefa</Text>
-            <InputNomeTarefa/>
+            <InputNomeTarefa name={name} setName={setName}/>
             <Text style={styles.data}>Data de Entrega</Text>
-            <InputDataTarefa/>
+            <InputDataTarefa date={date} setDate={setDate}/>
             <Text style={styles.horario}>Horário</Text>
-            <InputHorário/>
+            <InputHorário time={time} setTime={setTime}/>
             <Text style={styles.descricao}>Descrição</Text>
-            <InputDescricao/>
+            <InputDescricao description={description} setDescription={setDescription}/>
             <Text style={styles.status}>Status</Text>
-            <InputStatus/>
-            <ButtonSalvar handle={handle}/>
+            <InputStatus status={status} setStatus={setStatus}/>
+            <ButtonSalvar status={status} date={date} name={name} time={time} description={description} handle={handle}/>
         </View>
     );
 }

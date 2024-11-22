@@ -16,12 +16,28 @@ export const styles = StyleSheet.create({
         fontSize: 20,
         marginTop: -5,
     },
-    barra:{
+    barra1:{
         width: 168,
         height: 30,
         marginLeft: 6,
         marginTop: 7,
-        backgroundColor: '#B6B6B6',
+        backgroundColor: '#FC5647',
+        borderRadius: 10,
+    },
+    barra2:{
+        width: 168,
+        height: 30,
+        marginLeft: 6,
+        marginTop: 7,
+        backgroundColor: '#71CCFF',
+        borderRadius: 10,
+    },
+    barra3: {
+        width: 168,
+        height: 30,
+        marginLeft: 6,
+        marginTop: 7,
+        backgroundColor: '#28C27F',
         borderRadius: 10,
     }
 });

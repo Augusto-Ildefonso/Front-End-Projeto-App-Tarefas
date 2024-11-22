@@ -21,7 +21,7 @@ export default BarraMenu = ({navigation, menuClose}) => {
     };
 
     return(
-        <SafeAreaView>
+        <View style={{marginTop: -50}}>
             <TouchableOpacity style={styles.fora} onPress={menuClose}></TouchableOpacity>
             <View style={styles.view}>
                 <TouchableOpacity onPress={onPressAlterar} style={styles.button}> 
@@ -72,7 +72,7 @@ export default BarraMenu = ({navigation, menuClose}) => {
                     />
                 </View>
             </View>
-        </SafeAreaView>
-        
+        </View>
+
     );
 }

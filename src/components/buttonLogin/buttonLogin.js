@@ -1,14 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import { Alert, TouchableOpacity, View, Text } from "react-native";
 import { styles } from "./style";
+import AuthServices from "../../services/AuthServices";
 
-export default function ButtonLogin({navigation}){
-    function onPressLogin(){  
-        navigation.navigate('TelaTarefas'); // Ajuste o nome da tela conforme necessário
+
+
+export default function ButtonLogin({login, password, navigation}) {
+    const onPressLogin = async (login, password) =>{
+        const isLogged = await AuthServices.loginUser(login, password);
+        if(isLogged) navigation.navigate('TelaTarefas');
+        else Alert.alert("Usuário ou senha estão incorretos")
     }
+
     return(
         <View>
-            <TouchableOpacity onPress={onPressLogin} style={styles.button}><Text style={styles.letra}>Login</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => onPressLogin(login, password)} style={styles.button}><Text style={styles.letra}>Login</Text></TouchableOpacity>
         </View>
     );
 }

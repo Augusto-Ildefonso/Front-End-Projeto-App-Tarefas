@@ -51,5 +51,7 @@ export const styles = StyleSheet.create({
     deleteIcon:{
         marginLeft: 190,
         marginTop: -28,
+        width: 24,
+        height: 24,
     }
 });

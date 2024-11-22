@@ -17,6 +17,6 @@ export const styles = StyleSheet.create({
     letra:{
         color: '#ffffff',
         fontFamily: 'Jura-Bold',
-        fontSize: 20,        
+            fontSize: 15,
     }
 })

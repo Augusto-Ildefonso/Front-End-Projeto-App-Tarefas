@@ -9,7 +9,7 @@ export default PopupSairConta = ({navigation, handle}) => {
         <View style={styles.view}>
             <Text style={styles.text}>Tem certeza que deseja</Text>
             <Text style={styles.text1}> sair da sua conta?</Text>
-            <ButtonSairConta navigation={navigation} handle={handle}/>
+            <ButtonSairConta navigation={navigation}/>
             <ButtonCancelar handle={handle}/>
         </View>
     );

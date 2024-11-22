@@ -18,5 +18,5 @@ export const styles = StyleSheet.create({
         color: '#ffffff',
         fontFamily: 'Jura-Bold',
         fontSize: 20,        
-    }
+    },
 })

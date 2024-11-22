@@ -3,10 +3,9 @@ import { View, Pressable, TextInput, Platform, TouchableOpacity, Text } from 're
 import { styles } from './style';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
-export default function InputDataAlterar() {
+export default function InputDataAlterar({data, setData}) {
     const [date, setDate] = useState(new Date());
     const [showPicker, setShowPicker] = useState(false);
-    const [dateOfBirth, setDateOfBirth] = useState('');
 
     const toggleDatepicker = () => {
         setShowPicker(!showPicker);
@@ -19,7 +18,7 @@ export default function InputDataAlterar() {
 
             if(Platform.OS === 'android'){
                 toggleDatepicker();
-                setDateOfBirth(currentDate.toDateString());
+                setData(currentDate.toDateString());
             }
         } else{
             toggleDatepicker();
@@ -27,7 +26,7 @@ export default function InputDataAlterar() {
     };
 
     const confirmIOSDate = () => {
-        setDateOfBirth(date.toDateString());
+        setData(date.toDateString());
         toggleDatepicker();
     };
 
@@ -66,8 +65,8 @@ export default function InputDataAlterar() {
                     <TextInput
                         style={styles.input}
                         placeholder={'Data...'}
-                        value={dateOfBirth}
-                        onChangeText = {setDateOfBirth}
+                        value={data}
+                        onChangeText = {setData}
                         placeholderTextColor={'#424242'}
                         autoCapitalize='none'
                         editable={false}

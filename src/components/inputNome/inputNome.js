@@ -2,14 +2,13 @@ import React from 'react';
 import { View, TextInput} from 'react-native';
 import { styles } from './style';
 
-export default function InputNome() {
-    const [text, onChangeText] = React.useState();
+export default function InputNome({nome, setNome}) {
     return (
         <View>
             <TextInput
                 style={styles.input}
-                onChangeText={onChangeText}
-                value={text}
+                onChangeText={(nome) => setNome(nome)}
+                value={nome}
                 placeholder={'Nome...'}
                 placeholderTextColor={'#424242'}
                 autoCapitalize='none'

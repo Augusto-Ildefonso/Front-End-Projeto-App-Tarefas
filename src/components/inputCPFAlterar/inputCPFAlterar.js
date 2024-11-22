@@ -2,14 +2,13 @@ import React from 'react';
 import { View, TextInput} from 'react-native';
 import { styles } from './style';
 
-export default function InputCPFAlterar() {
-    const [text, onChangeText] = React.useState();
+export default function InputCPFAlterar({cpf, setCpf}) {
     return (
         <View>
             <TextInput
                 style={styles.input}
-                onChangeText={onChangeText}
-                value={text}
+                onChangeText={(cpf) => setCpf(cpf)}
+                value={cpf}
                 placeholder={'CPF...'}
                 placeholderTextColor={'#424242'}
                 autoCapitalize='none'
