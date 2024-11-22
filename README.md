@@ -1,11 +1,7 @@
 # Projeto App de Tarefas - Front-End
 Esse repositório armazena o front-end de um app de tarefas. Ele foi feito com React-Native e utilizou o Expo para simular.
 ## O que falta:
-- Adiconar a lógica das Tarefas (Toggle e Tarefas)
-- Design das Tarefas
-- Integrar pop-up status com o pop-up de criar tarefa (e fazer com que ele mude as cores) e de editar tarefa
-- Mudar input horário para ele trabalhar com horas (atualmente ele tá com a data)
-- Integrar com back-end
+- Adiconar a lógica das Tarefas (Puxar tarefas do back e mostrar elas)
 ## Diretórios
 A função que cria o app está no arquivo `App.js`, já o resto do código (tela, componentes, rotas e afins) está armazenado dentro da pasta `/src`. Ela está subdividida em algumas pastas:
 - `/components`: contém os códigos dos componentes usados para construir as telas
